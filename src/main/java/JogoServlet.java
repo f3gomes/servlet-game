@@ -32,20 +32,22 @@ public class JogoServlet extends HttpServlet {
 
 
         PrintWriter out = response.getWriter();
-        
-        out.println("<html>");
-        out.println("<head><title>Resultado do Jogo</title></head>");
-        out.println("<body>");
-        out.println("<h1>Resultado do Jogo</h1>");
-        out.println("<ul>");
-        out.println("<li>Jogador 1: " + jogador1 + " (Valor 1: " + valor1 + ")</li>");
-        out.println("<li>Jogador 2: " + jogador2 + " (Valor 2: " + valor2 + ")</li>");
-        out.println("<li><strong>Resultado: " + jogo.getResultado() + "</strong></li>");
-        out.println("</ul>");
-        
 
-        out.println("<a href='index.html'>Voltar para a Página Inicial</a>");
+        out.println("<html>");
+        out.println("<head>");
+        out.println("<meta charset='UTF-8'>");
+        out.println("<title>Resultado do Jogo</title>");
+        out.println("</head>");
+        out.println("<body style='font-family: Arial, sans-serif; background-color: #f4f7fb; color: #333; display: flex; justify-content: center; flex-direction: column; align-items: center; height: 100vh;'>");
+        out.println("<h1 style='font-size: 3rem; color: #4caf50; margin-bottom: 20px; text-align: center; font-weight: 700;'>Resultado do Jogo</h1>");
+        out.println("<ul>");
+        out.println("<li style='font-size: 1.25rem; color: #007bff;'>Jogador 1: " + jogador1 + " (" + valor1 + ")</li>");
+        out.println("<li style='font-size: 1.25rem; color: #007bff;'>Jogador 2: " + jogador2 + " (" + valor2 + ")</li>");
+        out.println("<li><strong style='font-size: 1.5rem;'>" + jogo.getResultado() + "</strong></li>");
+        out.println("</ul>");
+        out.println("<a href='index.html' style='text-decoration: none; font-size: 1.25rem; font-weight: 500; color: #007bff; padding: 10px 20px; border-radius: 5px; background-color: #fff; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: background-color 0.3s ease;'>Voltar para a Página Inicial</a>");
         out.println("</body>");
         out.println("</html>");
+
     }
 }
