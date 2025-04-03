@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Servlet Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Jogo</h1>
+
+    <form action="JogoServlet" method="POST">
+      <div class="form-container">
+        <table>
+          <tr>
+            <td><label for="jogador1" class="font-bold">Jogador 1:</label></td>
+            <td>
+              <input type="text" id="jogador1" name="jogador1" required />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="valor1" class="font-bold">Pontuação:</label></td>
+            <td><input type="number" id="valor1" name="valor1" required /></td>
+          </tr>
+          <tr>
+            <td><label for="jogador2" class="font-bold">Jogador 2:</label></td>
+            <td>
+              <input type="text" id="jogador2" name="jogador2" required />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="valor2" class="font-bold">Pontuação:</label></td>
+            <td><input type="number" id="valor2" name="valor2" required /></td>
+          </tr>
+        </table>
+      </div>
+
+      <div>
+        <button type="submit" class="button btn-border">Iniciar Jogo</button>
+      </div>
+    </form>
+  </body>
+</html>
